@@ -8,7 +8,7 @@ def select_station():
   pass #このpassは処理を書いた後消してよい。
 
 
-def pay():
+def pay(untin,zandaka):
 
   #P-01 残高が十分で、自動チャージなし
   # print("チャージ残高は"+戻り値+"円です。")

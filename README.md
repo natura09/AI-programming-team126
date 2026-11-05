@@ -2,6 +2,7 @@
 AIプログラミング（チーム126）
 
 ・menu→はな
+・select_station→はな
 ・charge→るみ
 ・pay→しゃあうぇい
 

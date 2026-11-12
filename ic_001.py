@@ -8,31 +8,30 @@ def select_station():
   pass #このpassは処理を書いた後消してよい。
 
 
-def pay(untin,zandaka):
+def pay(untin,zandaka : int):
+  
+  print(f"チャージ残高は{zandaka}円です。")
 
-  #P-01 残高が十分で、自動チャージなし
-  # print("チャージ残高は"+戻り値+"円です。")
-  # print("精算後のチャージ残高は"+戻り値+"円です。")
-  # print("戻り値:", pay(3367, 133))
+  if zandaka < untin:
+    print("残高が不足しています。")
 
-  #P-02 精算後がちょうど 500 円（自動チャージなし）
-  # print("チャージ残高は"+戻り値+"円です。")
-  # print("精算後のチャージ残高は"+戻り値+"円です。")
-  # print("戻り値:", pay(3367, 133))
+    while zandaka < untin:
+      print("3000円自動チャージします")
+      zandaka += 3000
 
-  #P-03 精算後に 500 円未満になる（仕様書の例）
-  # print("チャージ残高は"+戻り値+"円です。")
-  # print("精算後のチャージ残高は"+戻り値+"円です。")
-  # print("残高が500円未満のため 3000円自動チャージします。")
-  # print("戻り値:", pay(3367, 133))
+  elif zandaka >= untin + 500: 
+    zandaka = zandaka - untin 
+    print(f"精算後のチャージ残高は{zandaka}円です。")
 
-  #P-09 残高不足（自動チャージ 3 回）
+  else:
+    print("残高が500 円未満のため3000 円自動チャージします。")
+    zandaka = zandaka - untin + 3000
 
-  #自動チャージはこっちで実装！
-
-  # if 残高 で場合分け
-
-  pass #このpassは処理を書いた後消してよい。
+  print(f"チャージ残高は{zandaka}円です。")
+  
+  return zandaka
+ 
+  # pass #このpassは処理を書いた後消してよい。
 
 
 def charge():

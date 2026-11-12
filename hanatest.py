@@ -50,12 +50,6 @@ def charge(balance):
       print("チャージをキャンセルしました")
   print(f"チャージ残高は{balance}円です")
   return balance
-
-
-      
-
-
-
     
 def main():
   balance = 500
